@@ -1,0 +1,770 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* 个人信息部分样式 */
+.section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.profile-info {
+    flex: 2;
+}
+
+.profile-image {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.profile-info .title {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info .institution {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info h3 {
+    color: #007bff;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.profile-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-info a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.wechat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.rednote {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* 学术成果部分样式 */
+.publications-container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* 标签页样式 */
+.pub-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+/* 论文卡片样式 */
+.publication-card {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.pub-image {
+    flex: 0 0 200px;
+}
+
+.pub-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pub-details {
+    flex: 1;
+}
+
+.pub-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.pub-authors {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.pub-venue {
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.abstract-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.abstract-btn:hover {
+    color: #0056b3;
+}
+
+.pub-abstract {
+    display: none;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.pub-abstract.show {
+    display: block;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.pub-link, .bibtex-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.pub-link:hover, .bibtex-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+.bibtex-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+/* 最新动态部分样式 */
+.news-container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.news-list {
+    position: relative;
+    padding-left: 50px;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 50px;
+}
+
+.news-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 30px;
+}
+
+/* 时间轴样式 */
+.news-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* 确保日期显示正确 */
+.news-date span {
+    display: block;
+    text-align: center;
+}
+
+.news-date .date {
+    font-weight: bold;
+    color: #333;
+}
+
+.news-date .month,
+.news-date .day {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 添加日期分隔符 */
+.news-date .month::before,
+.news-date .day::before {
+    content: '-';
+    margin: 0 0.2rem;
+    color: #666;
+}
+
+/* 动态内容样式 */
+.news-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.news-content p {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.news-content em {
+    font-style: italic;
+    color: #007bff;
+}
+
+.news-content strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* 时间轴圆点 */
+.news-item::before {
+    content: '';
+    position: absolute;
+    left: -52px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #007bff;
+    border: 2px solid white;
+    z-index: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .publication-card {
+        flex-direction: column;
+    }
+
+    .pub-image {
+        flex: 0 0 auto;
+    }
+
+    .pub-tabs {
+        flex-wrap: wrap;
+    }
+
+    .news-list {
+        margin-left: 20px;
+        padding-left: 30px;
+    }
+
+    .news-date {
+        left: -60px;
+        min-width: 50px;
+        padding: 5px;
+    }
+
+    .news-item {
+        padding-left: 15px;
+    }
+
+    .news-date::after {
+        right: -12px;
+        width: 10px;
+    }
+
+    .news-item::before {
+        left: -37px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .profile-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-image {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .profile-image img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+}
+
+/* 兴趣爱好部分样式 */
+.hobbies-container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.hobbies-content {
+    margin-bottom: 3rem;
+}
+
+.hobby-text {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.hobby-text h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.hobby-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 轮播图样式 */
+.hobby-swiper {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Swiper导航按钮样式 */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+}
+
+/* Swiper分页器样式 */
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007bff;
+    opacity: 1;
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .hobby-swiper {
+        height: 300px;
+    }
+
+    .hobby-text {
+        padding: 1.5rem;
+    }
+}
+
+/* CV 下载按钮样式 */
+.cv-section {
+    margin-top: 1.5rem;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cv-btn:hover {
+    background: #0056b3;
+    text-decoration: none !important;
+}
+
+/* 隐藏所有论文部分 */
+.pub-content {
+    display: none;
+}
+
+/* 只有添加 active 类的论文部分显示 */
+.pub-content.active {
+    display: block;
+}
+
+/* 新的背景图显示方式，用于显示 benchmaker.jpg */
+
+.benchmaker-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('benchmaker.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px; */
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */
+} 
+
+.tailored-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('tailored.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.unicbe-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('unicbe.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.coglm-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('coglm.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.focus-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('focus.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.poor-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('poor.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.batch-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('batch.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.esc-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('esc.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.gdr-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('gdr.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.tdg-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('tdg.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.bcr-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('bcr.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.pca-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('pca.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.dsc-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('dsc.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.fsc-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('fsc.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 
+
+.ie-img {
+    width: 100%;
+    /* 设置高度比例，例如16:9 */
+    padding-top: 80.25%;  
+    background-image: url('ie.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 7px;
+    /* 添加边框用于调试 */
+    /* border: 1px solid rgb(121, 167, 196); */ 
+} 

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peiwen Yuan(袁沛文)</title>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 引入Swiper轮播组件 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Peiwen Yuan</div>
+            <ul class="nav-links">
+                <li><a href="#profile">基础信息</a></li>
+                <li><a href="#publications">学术成果</a></li>
+                <li><a href="#news">最新动态</a></li>
+                <li><a href="#hobbies">兴趣爱好</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 个人基础信息部分 -->
+    <section id="profile" class="section">
+        <div class="profile-container">
+            <div class="profile-info">
+                <h1>Peiwen Yuan (袁沛文)</h1>
+                <p class="title">PhD candidate</p>
+                <p class="institution">
+                    <a href="https://www.bit.edu.cn">Beijing Institute of Technology (北京理工大学)</a><br>
+                    Advised by <a href="https://dblp.org/pid/21/2083-1.html">Kan Li</a>
+                </p>
+                
+                <div class="research-interests">
+                    <h3>Research Interests</h3>
+                    <p>Large language model reasoning and evaluation, information retrieval, and advanced technology in artificial intelligence.</p>
+                </div>
+
+                <div class="education">
+                    <h3>Education</h3>
+                    <p>
+                        <strong>PhD in Computer Science and Technology</strong> (2022.9-2028.6)<br>
+                        <a href="https://cs.bit.edu.cn">School of Computer Science</a>, Beijing Institute of Technology
+                    </p>
+                    <p>
+                        <strong>Bachelor's Degree</strong> (2018-2022)<br>
+                        School of Teli Xu, Beijing Institute of Technology
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <p>Research Intern at <a href="https://www.xiaohongshu.com/">Xiaohongshu</a> (2023.3-present)</p>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Curriculum Vitae</h3>
+                    <a href="CV_Peiwen_Yuan.pdf" class="cv-btn" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact</h3>
+                    <div class="contact-links">
+                        <a href="mailto:678ypw@gmail.com"><i class="fas fa-envelope"></i> 678ypw@gmail.com</a>
+                        <a href="https://scholar.google.com.hk/citations?user=cUB5XN8AAAAJ&hl=zh-CN&oi=ao"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                        <a href="https://github.com/ypw0102"><i class="fab fa-github"></i> GitHub</a>
+                        <p class="wechat"><i class="fab fa-weixin"></i> WeChat: exerciseswjybm</p>
+                        <p class="rednote"><i class="fas fa-book"></i> RedNote: 9519638115</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="./WechatIMG2207.jpg" alt="Peiwen Yuan">
+            </div>
+        </div>
+    </section>
+
+    <!-- 学术成果部分 -->
+    <section id="publications" class="section">
+        <div class="publications-container">
+            <h2 class="section-title">学术成果</h2>
+            
+            <!-- 论文分类标签 -->
+            <div class="pub-tabs">
+                <button class="tab-btn active" data-tab="under-review">Under Review</button>
+                <button class="tab-btn" data-tab="first-author">First Author</button>
+                <button class="tab-btn" data-tab="co-author">Co-Author</button>
+            </div>
+
+            <!-- Under Review 论文 -->
+            <div class="pub-content active" id="under-review">
+                <!-- LLM-Powered Benchmark Factory -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="benchmaker-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">LLM-Powered Benchmark Factory: Reliable, Generic, and Efficient</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Yueqi Zhang, Jiayi Shi, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">Submit to ICML2025</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">The rapid advancement of large language models (LLMs) has led to a surge in both model supply and application demands. To facilitate effective matching between them, reliable, generic and efficient benchmark generators are widely needed. However, human annotators are constrained by inefficiency, and current LLM benchmark generators not only lack generalizability but also struggle with limited reliability, as they lack a comprehensive evaluation framework for validation and optimization. To fill this gap, we first propose an automated and unbiased evaluation framework, structured around four dimensions and ten criteria. Under this framework, we carefully analyze the advantages and weaknesses of directly prompting LLMs as generic benchmark generators. To enhance the reliability, we introduce a series of methods to address the identified weaknesses and integrate them as BenchMaker. Experiments across multiple LLMs and tasks confirm that BenchMaker achieves superior or comparable performance to human-annotated benchmarks on all metrics, highlighting its generalizability and reliability. More importantly, it delivers highly consistent evaluation results across 12 LLMs (0.967 Pearson correlation against MMLU-Pro), while taking only $0.005 and 0.38 minutes per sample.</p>
+                        <div class="pub-links">
+                            <a href="https://www.arxiv.org/abs/2502.01683" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2025llm,
+  title={LLM-Powered Benchmark Factory: Reliable, Generic, and Efficient},
+  author={Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Zhang, Yueqi and Shi, Jiayi and Tan, Chuyi and Pan, Boyuan and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2502.01683},
+  year={2025}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beyond One-Size-Fits-All -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="tailored-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Beyond One-Size-Fits-All: Tailored Benchmarks for Efficient Evaluation</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan*</b>, Yueqi Zhang*, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Jiayi Shi, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">Submit to ACL2025</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Evaluating models on large benchmarks can be very resource-intensive, especially during a period of rapid model evolution. Existing efficient evaluation methods estimate the performance of target models by testing them on a small, static coreset derived from the publicly available evaluation results of source models, which are separate from the target models. However, these approaches rely on the assumption that target models have high prediction consistency with source models, which doesn't generalize well in practice. To fill this gap, we propose TailoredBench, a method that conducts customized evaluation tailored to each target model. Specifically, a Global-coreset is first constructed as a probe to identify the most consistent source models for each target model with an adaptive source model selection strategy. Afterwards, a scalable K-Medoids clustering algorithm is proposed to extend the Global-coreset to a tailored Native-coreset for each target model. According to the predictions on respective Native-coreset, we estimate the overall performance of target models with a calibrated estimation strategy. Comprehensive experiments on five benchmarks across over 300 models demonstrate that compared to best performing baselines, TailoredBench achieves an average reduction of 31.4% in MAE of accuracy estimates under the same inference budgets, showcasing strong effectiveness and generalizability.</p>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/pdf/d9e7c8315f88166cc2433af95fa107f248b37e0a.pdf" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuanbeyond,
+  title={Beyond One-Size-Fits-All: Tailored Benchmarks for Efficient Model Evaluation},
+  author={Yuan, Peiwen and Zhang, Yueqi and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Shi, Jiayi and Tan, Chuyi and Pan, Boyuan and Hu, Yao and Li, Kan}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Author 论文 -->
+            <div class="pub-content" id="first-author">
+                <!-- UniCBE -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="unicbe-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">UniCBE: An Uniformity-driven Comparing Based Evaluation Framework with Unified Multi-Objective Optimization</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Yueqi Zhang, Jiayi Shi, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">ICLR2025</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Human preference plays a significant role in measuring large language models and guiding them to align with human values. Unfortunately, current comparing-based evaluation (CBE) methods typically focus on a single optimization objective, failing to effectively utilize scarce yet valuable preference signals. To address this, we delve into key factors that can enhance the accuracy, convergence, and scalability of CBE: suppressing sampling bias, balancing descending process of uncertainty, and mitigating updating uncertainty. Following the derived guidelines, we propose UNICBE, a unified uniformity-driven CBE framework which simultaneously optimize these core objectives by constructing and integrating three decoupled sampling probability matrices, each designed to ensure uniformity in specific aspects. We further ablate the optimal tuple sampling and preference aggregation strategies to achieve efficient CBE. On the AlpacaEval benchmark, UNICBE saves over 17% of evaluation budgets while achieving a Pearson correlation with ground truth exceeding 0.995, demonstrating excellent accuracy and convergence. In scenarios where new models are continuously introduced, UNICBE can even save over 50% of evaluation costs, highlighting its improved scalability.</p>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/pdf?id=rpwGUtTeA5" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2024focused,
+  title={Focused Large Language Models are Stable Many-Shot Learners},
+  author={Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Zhang, Yueqi and Tan, Chuyi and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2408.13987},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CogLM -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="coglm-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">CogLM: Tracking Cognitive Development of Large Language Models</h3>
+                        <p class="pub-authors">Xinglin Wang*, <b>Peiwen Yuan*</b>, Shaoxiong Feng, Yiwei Li, Boyuan Pan, Heda Wang, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">NAACL2025 main</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Piaget's Theory of Cognitive Development (PTC) posits that the development of cognitive levels forms the foundation for human learning across various abilities. As Large Language Models (LLMs) have recently shown remarkable abilities across a wide variety of tasks, we are curious about the cognitive levels of current LLMs: to what extent they have developed and how this development has been achieved. To this end, we construct a benchmark CogLM (Cognitive Ability Evaluation for Language Model) based on PTC to assess the cognitive levels of LLMs. CogLM comprises 1,220 questions spanning 10 cognitive abilities crafted by more than 20 human experts, providing a comprehensive testbed for the cognitive levels of LLMs. Through extensive experiments across multiple mainstream LLMs with CogLM, we find that: (1) Human-like cognitive abilities have emerged in advanced LLMs (GPT-4), comparable to those of a 20-year-old human. (2) The parameter size and optimization objective are two key factors affecting the cognitive levels of LLMs. (3) The performance on downstream tasks is positively correlated with the level of cognitive abilities. These findings fill the gap in research on the cognitive abilities of LLMs, tracing the development of LLMs from a cognitive perspective and guiding the future direction of their evolution.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2408.09150" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{wang2024coglm,
+  title={CogLM: Tracking Cognitive Development of Large Language Models},
+  author={Wang, Xinglin and Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2408.09150},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Focused Large Language Models -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="focus-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Focused Large Language Models are Stable Many-Shot Learners</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Yueqi Zhang, Chuyi Tan, Boyuan Pan, Heda Wang, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">EMNLP2024 main</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">In-Context Learning (ICL) enables large language models (LLMs) to achieve rapid task adaptation by learning from demonstrations. With the increase in available context length of LLMs, recent experiments have shown that the performance of ICL does not necessarily scale well in many-shot (demonstration) settings. We theoretically and experimentally confirm that the reason lies in more demonstrations dispersing the model attention from the query, hindering its understanding of key content. Inspired by how humans learn from examples, we propose a training-free method FocusICL, which conducts triviality filtering to avoid attention being diverted by unimportant contents at token-level and operates hierarchical attention to further ensure sufficient attention towards current query at demonstration-level. We also design an efficient hyperparameter searching strategy for FocusICL based on model perplexity of demonstrations. Comprehensive experiments validate that FocusICL achieves an average performance improvement of 5.2% over vanilla ICL and scales well with many-shot demonstrations.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2408.13987" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2024focused,
+  title={Focused Large Language Models are Stable Many-Shot Learners},
+  author={Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Zhang, Yueqi and Tan, Chuyi and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2408.13987},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poor-Supervised Evaluation -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="poor-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Poor-Supervised Evaluation for SuperLLM via Mutual Consistency</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Boyuan Pan, Heda Wang, Kan Li</p>
+                        <p class="pub-venue">ACL2024 findings</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">The guidance from capability evaluations has greatly propelled the progress of human society and the development of Artificial Intelligence. However, as LLMs evolve, it becomes challenging to construct evaluation benchmark with accurate labels for SuperLLMs whose capabilities approach or even surpass those of humans. To credibly conduct evaluation without accurate labels (denoted as poor-supervised evaluation), we first prove that the consistency between the model under evaluation and the reference model, when their prediction distributions are independent and the sample size is infinite, can equivalently assess the true capabilities of the model to be evaluated. However, using either humans or LLMs as the reference model cannot sufficiently meet the conditions, for which we propose the PEEM algorithm. By treating all models under evaluation as reference models, PEEM alternately optimizes model weights and filters reference models based on EM algorithm to maximally alleviate the insufficiency of the conditions. Comprehensive experiments across 3 types of tasks with 16 mainstream LLMs validate the efficiency, universality, and effectiveness of PEEM. More generally, PEEM has advanced the evaluation paradigm evolution from human-centric to human&model-centric, alleviating the limitations of human capabilities for evaluating SuperLLMs.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2408.13738" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2024poor,
+  title={Poor-Supervised Evaluation for SuperLLM via Mutual Consistency},
+  author={Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2408.13738},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BatchEval -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="batch-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">BatchEval: Towards Human-like Text Evaluation</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Shaoxiong Feng, Yiwei Li, Xinglin Wang, Boyuan Pan, Heda Wang, Kan Li</p>
+                        <p class="pub-venue">ACL2024 main oral</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Significant progress has been made in automatic text evaluation with the introduction of large language models (LLMs) as evaluators. However, current sample-wise evaluation paradigm suffers from the following issues: (1) Sensitive to prompt design; (2) Poor resistance to noise; (3) Inferior ensemble performance with static reference. Inspired by the fact that humans treat both criterion definition and inter sample comparison as references for evaluation, we propose BatchEval, a paradigm that conducts batch-wise evaluation iteratively to alleviate the above problems. We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format. Comprehensive experiments across 3 LLMs on 4 text evaluation tasks demonstrate that BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations with only 64% API cost on average. Further analyses have been conducted to verify the robustness, generalization, and working mechanism of BatchEval.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2401.00437v1" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2023batcheval,
+  title={BatchEval: Towards Human-like Text Evaluation},
+  author={Yuan, Peiwen and Feng, Shaoxiong and Li, Yiwei and Wang, Xinglin and Pan, Boyuan and Wang, Heda and Li, Kan},
+  journal={arXiv preprint arXiv:2401.00437},
+  year={2023}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escape Sky-high Cost -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="esc-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning</h3>
+                        <p class="pub-authors">Yiwei Li*, <b>Peiwen Yuan*</b>, Shaoxiong Feng, Boyuan Pan, Xinglin Wang, Bin Sun, Heda Wang, Kan Li</p>
+                        <p class="pub-venue">ICLR2024 poster</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Self-consistency (SC) has been a widely used decoding strategy for chain-of-thought reasoning. Despite bringing significant performance improvements across a variety of multi-step reasoning tasks, it is a high-cost method that requires multiple sampling with the preset size. In this paper, we propose a simple and scalable sampling process, Early-Stopping Self-Consistency (ESC), to greatly reduce the cost of SC without sacrificing performance. On this basis, one control scheme for ESC is further derivated to dynamically choose the performance-cost balance for different tasks and models. To demonstrate ESC's effectiveness, we conducted extensive experiments on three popular categories of reasoning tasks: arithmetic, commonsense and symbolic reasoning over language models with varying scales. The empirical results show that ESC reduces the average number of sampling of chain-of-thought reasoning by a significant margin on six benchmarks, including MATH (-33.8%), GSM8K (-80.1%), StrategyQA (-76.8%), CommonsenseQA (-78.5%), Coin Flip (-84.2%) and Last Letters (-67.4%), while attaining comparable performances.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2401.10480" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{li2024escape,
+  title={Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning},
+  author={Li, Yiwei and Yuan, Peiwen and Feng, Shaoxiong and Pan, Boyuan and Wang, Xinglin and Sun, Bin and Wang, Heda and Li, Kan},
+  journal={arXiv preprint arXiv:2401.10480},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generative Dense Retrieval -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="gdr-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Generative Dense Retrieval: Memory Can Be a Burden</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan*</b>, Xinglin Wang*, Shaoxiong Feng, Boyuan Pan, Yiwei Li, Heda Wang, Xupeng Miao, Kan Li</p>
+                        <p class="pub-venue">EACL2024 main oral</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Generative Retrieval (GR), autoregressively decoding relevant document identifiers given a query, has been shown to perform well under the setting of small-scale corpora. By memorizing the document corpus with model parameters, GR implicitly achieves deep interaction between query and document. However, such a memorizing mechanism faces three drawbacks: (1) Poor memory accuracy for fine-grained features of documents; (2) Memory confusion gets worse as the corpus size increases; (3) Huge memory update costs for new documents. To alleviate these problems, we propose the Generative Dense Retrieval (GDR) paradigm. Specifically, GDR first uses the limited memory volume to achieve inter-cluster matching from query to relevant document clusters. Memorizing-free matching mechanism from Dense Retrieval (DR) is then introduced to conduct fine-grained intra-cluster matching from clusters to relevant documents. The coarse-to-fine process maximizes the advantages of GR's deep interaction and DR's scalability. Besides, we design a cluster identifier constructing strategy to facilitate corpus memory and a cluster-adaptive negative sampling strategy to enhance the intra-cluster mapping ability. Empirical results show that GDR obtains an average of 3.0 R@100 improvement on NQ dataset under multiple settings and has better scalability.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2401.10487" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2024generative,
+  title={Generative Dense Retrieval: Memory Can Be a Burden},
+  author={Yuan, Peiwen and Wang, Xinglin and Feng, Shaoxiong and Pan, Boyuan and Li, Yiwei and Wang, Heda and Miao, Xupeng and Li, Kan},
+  journal={arXiv preprint arXiv:2401.10487},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turning Dust into Gold -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="tdg-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Turning Dust into Gold: Distilling Complex Reasoning Capabilities from LLMs by Leveraging Negative Data</h3>
+                        <p class="pub-authors">Yiwei Li*, <b>Peiwen Yuan*</b>, Shaoxiong Feng, Boyuan Pan, Bin Sun, Xinglin Wang, Heda Wang, Kan Li</p>
+                        <p class="pub-venue">AAAI2024 oral</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Large Language Models (LLMs) have performed well on various reasoning tasks, but their inaccessibility and numerous parameters hinder wide application in practice. One promising way is distilling the reasoning ability from LLMs to small models by the generated chain-of-thought reasoning paths. In some cases, however, LLMs may produce incorrect reasoning chains, especially when facing complex mathematical problems. Previous studies only transfer knowledge from positive samples and drop the synthesized data with wrong answers. In this work, we illustrate the merit of negative data and propose a model specialization framework to distill LLMs with negative samples besides positive ones. The framework consists of three progressive steps, covering from training to inference stages, to absorb knowledge from negative data. We conduct extensive experiments across arithmetic reasoning tasks to demonstrate the role of negative data in distillation from LLM.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2312.12832" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{li2023turning,
+  title={Turning dust into gold: Distilling complex reasoning capabilities from llms by leveraging negative data},
+  author={Li, Yiwei and Yuan, Peiwen and Feng, Shaoxiong and Pan, Boyuan and Sun, Bin and Wang, Xinglin and Wang, Heda and Li, Kan},
+  journal={arXiv preprint arXiv:2312.12832},
+  year={2023}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Better Correlation and Robustness -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="bcr-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Better Correlation and Robustness: A Distribution-Balanced Self-Supervised Learning Framework for Automatic Dialogue Evaluation</h3>
+                        <p class="pub-authors"><b>Peiwen Yuan</b>, Xinglin Wang, Jiayi Shi, Bin Sun, Yiwei Li, Kan Li</p>
+                        <p class="pub-venue">NeurIPS2023 poster</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Turn-level dialogue evaluation models (TDEMs), using self-supervised learning (SSL) framework, have achieved state-of-the-art performance in open-domain dialogue evaluation. However, these models inevitably face two potential problems. First, they have low correlations with humans on medium coherence samples as the SSL framework often brings training data with unbalanced coherence distribution. Second, the SSL framework leads TDEM to nonuniform score distribution. There is a danger that the nonuniform score distribution will weaken the robustness of TDEM through our theoretical analysis. To tackle these problems, we propose Better Correlation and Robustness (BCR), a distribution-balanced self-supervised learning framework for TDEM. Given a dialogue dataset, BCR offers an effective training set reconstructing method to provide coherence-balanced training signals and further facilitate balanced evaluating abilities of TDEM. To get a uniform score distribution, a novel loss function is proposed, which can adjust adaptively according to the uniformity of score distribution estimated by kernel density estimation. Comprehensive experiments on 17 benchmark datasets show that vanilla BERT-base using BCR outperforms SOTA methods significantly by 11.3% on average. BCR also demonstrates strong generalization ability as it can lead multiple SOTA methods to attain better correlation and robustness.</p>
+                        <div class="pub-links">
+                            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/a8b148559549ce33261e79b4400e0d77-Abstract-Conference.html" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{yuan2024better,
+  title={Better Correlation and Robustness: A Distribution-Balanced Self-Supervised Learning Framework for Automatic Dialogue Evaluation},
+  author={Yuan, Peiwen and Wang, Xinglin and Shi, Jiayi and Sun, Bin and Li, Yiwei},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallel Corpora Alignment Framework -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="pca-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Parallel Corpora Alignment Framework for Multilingual and Robust Automatic Dialogue Evaluation</h3>
+                        <p class="pub-authors">Xinglin Wang*, Jiayi Shi*, <b>Peiwen Yuan*</b>, Kan Li</p>
+                        <p class="pub-venue">SIGDIAL x INLG 2023 poster</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Open-domain automatic dialogue evaluation plays an important role in dialogue systems. While recent efforts are being put into making learning-based evaluation metrics correlate better with human evaluation, robust metrics for parallel corpora and multiple domains remain unexplored. Parallel corpora refer to corpora that express the same idea in different ways (e.g., translation, paraphrasing and back-translation). In this paper, we propose Parallel Corpora Alignment Framework (PCAF), which improves the consistency and robustness of model evaluation on parallel corpora. Firstly, parallel corpora are aligned in semantic space through parallel-corpora-aligned contrastive learning. Then, parallel-corpora-aligned distillation on multi-dataset is applied to further improve model's generalization ability across multiple data domains. Our approach ranks second on the final test data of DSTC11 track4 subtask1 ("Multilingual Automatic Evaluation Metrics", turn-level) and third on the subtask2 ("Robust Automatic Evaluation Metrics", turn-level), which proves the strong generalization ability and robustness of our proposed approach.</p>
+                        <div class="pub-links">
+                            <a href="https://aclanthology.org/2023.dstc-1.15/" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@inproceedings{wang2023parallel,
+  title={Parallel Corpora Alignment Framework for Multilingual and Robust Automatic Dialogue Evaluation},
+  author={Wang, Xinglin and Shi, Jiayi and Yuan, Peiwen and Li, Kan},
+  booktitle={Proceedings of The Eleventh Dialog System Technology Challenge},
+  pages={123--132},
+  year={2023}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-Author 论文 -->
+            <div class="pub-content" id="co-author">
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="dsc-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning</h3>
+                        <p class="pub-authors">Xinglin Wang, Shaoxiong Feng, Yiwei Li, <b>Peiwen Yuan</b>, Yueqi Zhang, Chuyi Tan, Boyuan Pan, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">NAACL2025 findings</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Self-consistency (SC), a widely used decoding strategy for chain-of-thought reasoning, shows significant gains across various multi-step reasoning tasks but comes with a high cost due to multiple sampling with the preset size. Its variants, Adaptive self-consistency (ASC) and Early-stopping self-consistency (ESC), dynamically adjust the number of samples based on the posterior distribution of a set of pre-samples, reducing the cost of SC with minimal impact on performance. Both methods, however, do not exploit the prior information about question difficulty. It often results in unnecessary repeated sampling for easy questions that could be accurately answered with just one attempt, wasting resources. To tackle this problem, we propose Difficulty-Adaptive Self-Consistency (DSC), which leverages the difficulty information of batch queries from both prior and posterior perspectives to adaptively allocate inference resources, further reducing the overall cost of SC. To demonstrate the effectiveness of DSC, we conduct extensive experiments on three popular categories of reasoning tasks: arithmetic, commonsense and symbolic reasoning on six benchmarks. The empirical results show that DSC consistently surpasses the strong baseline ASC and ESC in terms of costs by a significant margin, while attaining comparable performances.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/pdf/2408.13457" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{wang2024make,
+                                title={Make every penny count: Difficulty-adaptive self-consistency for cost-efficient reasoning},
+                                author={Wang, Xinglin and Feng, Shaoxiong and Li, Yiwei and Yuan, Peiwen and Zhang, Yueqi and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+                                journal={arXiv preprint arXiv:2408.13457},
+                                year={2024}
+                              }</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Integrate the Essence and Eliminate the Dross -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="fsc-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Integrate the Essence and Eliminate the Dross: Fine-Grained Self-Consistency for Free-Form Language Generation</h3>
+                        <p class="pub-authors">Xinglin Wang*, Yiwei Li*, Shaoxiong Feng, <b>Peiwen Yuan</b>, Boyuan Pan, Heda Wang, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">ACL2024 main</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Self-consistency (SC), leveraging multiple samples from LLMs, shows significant gains on various reasoning tasks but struggles with free-form generation due to the difficulty of aggregating answers. Its variants, UCS and USC, rely on sample selection or voting mechanisms to improve output quality. These methods, however, face limitations due to their inability to fully utilize the nuanced consensus knowledge present within multiple candidate samples, often resulting in suboptimal outputs. We propose Fine-Grained Self-Consistency (FSC) to addresses these limitations by extracting and integrating segment-level commonalities from candidate samples, enhancing the performance of LLMs both in open-ended and reasoning tasks. Based on this, we present two additional strategies: candidate filtering, which enhances overall quality by identifying highly similar candidate sets, and merging, which reduces input token requirements by combining similar samples. The effectiveness of FSC is demonstrated through extensive experiments on various tasks, including summarization, code generation, and mathematical reasoning, using GPT-3.5-turbo and GPT-4. The results indicate significant improvements over baseline methods, showcasing the potential of FSC to optimize output quality by effectively synthesizing fine-grained consensus knowledge from multiple samples.</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/pdf/2407.02056" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{wang2024integrate,
+  title={Integrate the Essence and Eliminate the Dross: Fine-Grained Self-Consistency for Free-Form Language Generation},
+  author={Wang, Xinglin and Li, Yiwei and Feng, Shaoxiong and Yuan, Peiwen and Pan, Boyuan and Wang, Heda and Hu, Yao and Li, Kan},
+  journal={arXiv preprint arXiv:2401.10487},
+  year={2024}
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instruction Embedding -->
+                <div class="publication-card">
+                    <div class="pub-image">
+                        <div class="ie-img"></div>
+                    </div>
+                    <div class="pub-details">
+                        <h3 class="pub-title">Instruction Embedding: Latent Representations of Instructions Towards Task Identification</h3>
+                        <p class="pub-authors">Yiwei Li*, Jiayi Shi*, Shaoxiong Feng, <b>Peiwen Yuan</b>, Xinglin Wang, Boyuan Pan, Heda Wang, Yao Hu, Kan Li</p>
+                        <p class="pub-venue">NeurIPS(DB track) 2024 main</p>
+                        <button class="abstract-btn">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show Abstract</span>
+                        </button>
+                        <p class="pub-abstract">Instruction data is crucial for improving the capability of Large Language Models (LLMs) to align with human-level performance. Recent research LIMA demonstrates that alignment is essentially a process where the model adapts instructions' interaction style or format to solve various tasks, leveraging pre-trained knowledge and skills. Therefore, for instructional data, the most important aspect is the task it represents, rather than the specific semantics and knowledge information. The latent representations of instructions play roles for some instruction-related tasks like data selection and demonstrations retrieval. However, they are always derived from text embeddings, encompass overall semantic information that influences the representation of task categories. In this work, we introduce a new concept, instruction embedding, and construct Instruction Embedding Benchmark (IEB) for its training and evaluation. Then, we propose a baseline Prompt-based Instruction Embedding (PIE) method to make the representations more attention on tasks. The evaluation of PIE, alongside other embedding methods on IEB with two designed tasks, demonstrates its superior performance in accurately identifying task categories. Moreover, the application of instruction embeddings in four downstream tasks showcases its effectiveness and suitability for instruction-related tasks.</p>
+                        <div class="pub-links">
+                            <a href="https://www.arxiv.org/pdf/2409.19680" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <button class="bibtex-btn"><i class="fas fa-quote-right"></i> BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <!-- 可选：添加 BibTeX 内容 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态部分 -->
+    <section id="news" class="section">
+        <div class="news-container">
+            <h2 class="section-title">最新动态</h2>
+            
+            <div class="news-list">
+                <!-- 最新动态 -->
+                
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">02</span>
+                        <span class="day">01</span>
+                    </div>
+                    <div class="news-content">
+                        <p>ARR FEB. 投稿 + 4！（1篇一作） # TeamWork</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">02</span>
+                        <span class="day">01</span>
+                    </div>
+                    <div class="news-content">
+                        <p>春节快乐！希望新的一年一切顺利！</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">01</span>
+                        <span class="day">31</span>
+                    </div>
+                    <div class="news-content">
+                        <p>LLM-Powered Benchmark Factory: Reliable, Generic, and Efficient 提交至ICML 2025，代码仓库已公开，欢迎上手尝试，生成属于你的benchmark！</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">01</span>
+                        <span class="day">23</span>
+                    </div>
+                    <div class="news-content">
+                        <p>UniCBE: An Uniformity-driven Comparing Based Evaluation Framework with Unified Multi-Objective Optimization 被ICLR 2025接收！</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">01</span>
+                        <span class="day">23</span>
+                    </div>
+                    <div class="news-content">
+                        <p>CogLM: Tracking Cognitive Development of Large Language Models 被NAACL 2025接收为main！</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date">2025</span>
+                        <span class="month">01</span>
+                        <span class="day">23</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning 被NAACL 2025接收为findings！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣爱好部分 -->
+    <section id="hobbies" class="section">
+        <div class="hobbies-container">
+            <h2 class="section-title">兴趣爱好</h2>
+            
+            <!-- 兴趣爱好描述 -->
+            <div class="hobbies-content">
+                <div class="hobby-text">
+                    <h3>运动</h3>
+                    <p>篮球、足球、乒乓球、羽毛球、飞盘、德州扑克等运动。</p>
+                </div>
+                
+                <div class="hobby-text">
+                    <h3>音乐</h3>
+                    <p>五月天、陶喆、门尼、王菲、李荣浩的音乐。</p>
+                </div>
+                
+                <div class="hobby-text">
+                    <h3>阅读</h3>
+                    <p>闲暇时光喜欢阅读科技、历史类书籍。</p>
+                </div>
+            </div>
+
+            <!-- 图片轮播 -->
+            <div class="swiper hobby-swiper" style="height: 800px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="play1.jpg" alt="兴趣爱好图片1">
+                        <div class="slide-caption">play</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="play2.jpg" alt="兴趣爱好图片2">
+                        <div class="slide-caption">play</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="play3.jpg" alt="兴趣爱好图片3">
+                        <div class="slide-caption">play</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="play4.jpg" alt="兴趣爱好图片3">
+                        <div class="slide-caption">play</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="play5.jpg" alt="兴趣爱好图片3">
+                        <div class="slide-caption">play</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="play6.jpg" alt="兴趣爱好图片3">
+                        <div class="slide-caption">play</div>
+                    </div>
+                </div>
+                <!-- 添加导航按钮 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- 添加分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他部分将在后续代码中添加 -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
